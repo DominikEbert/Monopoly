@@ -19,5 +19,7 @@ public class MonopolyMain {
         if(ergebnisS2.istPasch()) {
             System.out.println(spieler2.getName() + " hat einen Pasch gewürfelt.");
         }
-    }
+        Immobilie strasse = new Immobilie();
+        System.out.print(strasse.getBesitzer());
+    } 
 }
