@@ -8,3 +8,7 @@ Enis Tuncer
 Samuel Hausstätter
 Carl-Friedrich Rose:]
 Felix Lehnert :)
+#
+# Krankmeldungen
+
+Leider kann ich heute nicht zum Kurs kommen. Gerne kann ich mich aber mit Zoom oder Microsoft Teams dazuschalten. Johannes 
