@@ -5,7 +5,7 @@ Entwickler:
 
 Dominik Ebert
 
-Johannes Knoblich :}
+Johannes Knoblich :} https://github.com/DominikEbert/Monopoly/blob/master/README.md#krankmeldungen
 
 Enis Tuncer
 
