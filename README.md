@@ -17,4 +17,4 @@ Felix Lehnert :)
 #
 # Krankmeldungen
 
-Leider kann ich heute nicht zum Kurs kommen. Gerne kann ich mich aber mit Zoom oder Microsoft Teams dazuschalten. Schreibe mir gerne eine E-Mail an knokids.aj@gmail.com oder Bearbeite die Readme - Datei um mir bescheid zu geben. Johannes 
+Leider kann ich heute nicht zum Kurs kommen. Gerne kann ich mich aber mit Zoom oder Microsoft Teams dazuschalten. https://meet.jit.si/KrankheitsfallJohannes Johannes 
