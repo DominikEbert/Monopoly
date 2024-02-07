@@ -5,8 +5,9 @@ package de.niederseeon.monopoly;
  * kaufbares Feld, z.B Straßen, Bahnhöfe,...
  */
 public class Immobilie {
-	int kaufpreis;
-    Spieler besitzer;
+	private int kaufpreis;
+    private Spieler besitzer;
+    private int anzahlHaeuser;
 	/**
 	 * Konstruktor für Immobilien.
 	 */
