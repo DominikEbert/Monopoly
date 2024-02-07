@@ -5,8 +5,8 @@ public class Wuerfelergebnis {
 
     private int ergebnisWuerfel2;
     public Wuerfelergebnis() {
-        ergebnisWuerfel1 = (int) Math.round(Math.random() * 6);
-        ergebnisWuerfel2 = (int) Math.round(Math.random() * 6);
+        ergebnisWuerfel1 = (int) Math.round(Math.random() * 5 + 1);
+        ergebnisWuerfel2 = (int) Math.round(Math.random() * 5 + 1);
     }
 
     public Wuerfelergebnis(int zahl1, int zahl2) {
