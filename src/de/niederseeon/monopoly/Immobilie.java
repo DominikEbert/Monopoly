@@ -11,10 +11,27 @@ public class Immobilie {
     private String name;
     private int mietpreis;
     private Feld postition;
+    private int hypothekenwert;
     
     
-    	
-    	
+    
+ 
+
+
+	public int getHypothekenwert() {
+		return hypothekenwert;
+	}
+
+
+
+
+	public void setHypothekenwert(int hypothekenwert) {
+		this.hypothekenwert = hypothekenwert;
+	}
+
+
+
+
 	/**
 	 * Konstruktor für Immobilien.
 	 */
