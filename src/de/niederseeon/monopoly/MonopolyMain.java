@@ -20,6 +20,15 @@ public class MonopolyMain {
             System.out.println(spieler2.getName() + " hat einen Pasch gewürfelt.");
         }
         Immobilie strasse = new Immobilie();
-        System.out.print(strasse.getBesitzer());
+        
+    private static Immobilie erstelleStrasse() {
+        Immobilie chaussestrasse = new Immobilie();
+        chaussestrasse.setName("Chaussestrasse");
+        chaussestrasse.setKaufpreis(2000);
+        chaussestrasse.setMietpreis(120);
+        return chaussestrasse;
+        
+        System.out.println(chaussestrasse.getName());
+    }
     } 
 }
