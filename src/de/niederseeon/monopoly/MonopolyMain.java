@@ -24,12 +24,49 @@ public class MonopolyMain {
 		if (ergebnisS2.istPasch()) {
 			System.out.println(spieler2.getName() + " hat einen Pasch gewürfelt.");
 		}
-		Immobilie strasse = new Immobilie();
+		Strasse strasse = new Strasse();
+		Bahnhof bahnhof = new Bahnhof();
 		
-		Immobilie turmstrasse = new Immobilie();
+		Strasse badstrasse = new Strasse();
+		Strasse turmstrasse = new Strasse();
+		
+		Strasse chausseestrasse = new Strasse();
+		Strasse elisenstrasse = new Strasse();
+		Strasse poststrasse = new Strasse();
+		
+		Strasse seestrasse = new Strasse();
+		Strasse hafenstrasse = new Strasse();
+		Strasse neuestrasse = new Strasse();
+		
+		Strasse muenchnerstrasse = new Strasse();
+		Strasse wienerstrasse = new Strasse();
+		Strasse berlinerstrasse = new Strasse();
+		
+		Strasse theaterstrasse = new Strasse();
+		Strasse museumstrasse = new Strasse();
+		Strasse opernplatz = new Strasse();
+		
+		Strasse lessingstrasse = new Strasse();
+		Strasse schillerstrasse = new Strasse();
+		Strasse goethestrasse = new Strasse();
+		
+		Strasse rathausplatz = new Strasse();
+		Strasse hauptstrasse= new Strasse();
+		Strasse bahnhofstrasse = new Strasse();
+		
+		Strasse parkstrasse = new Strasse();
+		Strasse schlossallee = new Strasse();
+		
+		Bahnhof nordbahnhof = new Bahnhof();
+		Bahnhof suedbahnhof = new Bahnhof();
+		Bahnhof westbahnhof = new Bahnhof();
+		Bahnhof ostbahnhof = new Bahnhof();
+		
+		
+		
 		
 		erstelleTurmstrasse(turmstrasse);
-			
+		erstelleSchillerstrasse(schillerstrasse);
 		
 		
 		
@@ -38,7 +75,7 @@ public class MonopolyMain {
 		
 	}
 
-	private static void erstelleTurmstrasse(Immobilie turmstrasse) {
+	private static void erstelleTurmstrasse(Strasse turmstrasse) {
 		// Turmstraße Daten *******************************************
 			turmstrasse.setName("Turmstraße");
 		
@@ -58,7 +95,7 @@ public class MonopolyMain {
 			turmstrasse.setPreisHaus4(1000);
 			turmstrasse.setPreisHotel(1000);
 	}
-	private static void erstelleSchillerstrasse(Immobilie schillerstrasse) {
+	private static void erstelleSchillerstrasse(Strasse schillerstrasse) {
 		// Schillerstraße Daten *******************************************
 			schillerstrasse.setName("Schillerstraße");
 		
