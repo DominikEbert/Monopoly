@@ -92,4 +92,18 @@ public class Strasse extends Immobilie {
 		public void setHypothekenwert(int hypothekenwert) {
 			this.hypothekenwert = hypothekenwert;
 		}
+
+
+
+		public Strasse(String name, int kaufpreis, int mietpreis, int hypothekenwert, int mietpreisHaus1, 
+				int mietpreisHaus2, int mietpreisHaus3, int mietpreisHaus4, int mietpreisHotel, int preisGebaeude) {
+			super(kaufpreis, name, mietpreis);
+			this.preisGebaeude = preisGebaeude;
+			this.mietpreisHaus1 = mietpreisHaus1;
+			this.mietpreisHaus2 = mietpreisHaus2;
+			this.mietpreisHaus3 = mietpreisHaus3;
+			this.mietpreisHaus4 = mietpreisHaus4;
+			this.mietpreisHotel = mietpreisHotel;
+			this.hypothekenwert = hypothekenwert;
+		}
 }
