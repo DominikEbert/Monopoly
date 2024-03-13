@@ -28,6 +28,7 @@ public class MonopolyMain {
 		
 		Immobilie badstrasse = new Immobilie();
 		badstrasse.setName("badstrasse");
+		badstrasse.setKaufpreis(1200);
 		
 		
 		System.out.println(badstrasse.getName());
