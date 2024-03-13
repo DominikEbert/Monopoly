@@ -4,11 +4,7 @@ public class Strasse extends Immobilie {
 	    private int anzahlGebauterHaeuser;
 	    private boolean hotelGebaut;
 	    
-	    private int preisHaus1;
-	    private int preisHaus2;
-	    private int preisHaus3;
-	    private int preisHaus4;
-	    private int preisHotel;
+	    private int preisGebaeude;
 	    
 	    private int mietpreisHaus1;
 	    private int mietpreisHaus2;
@@ -21,6 +17,20 @@ public class Strasse extends Immobilie {
 		public int getAnzahlGebauterHaeuser() {
 			return anzahlGebauterHaeuser;
 		}
+		
+		
+
+		public int getPreisGebaeude() {
+			return preisGebaeude;
+		}
+
+
+
+		public void setPreisGebaeude(int preisGebaeude) {
+			this.preisGebaeude = preisGebaeude;
+		}
+
+
 
 		public void setAnzahlGebauterHaeuser(int anzahlGebauterHaeuser) {
 			this.anzahlGebauterHaeuser = anzahlGebauterHaeuser;
@@ -34,46 +44,7 @@ public class Strasse extends Immobilie {
 			this.hotelGebaut = hotelGebaut;
 		}
 
-		public int getPreisHaus1() {
-			return preisHaus1;
-		}
-
-		public void setPreisHaus1(int preisHaus1) {
-			this.preisHaus1 = preisHaus1;
-		}
-
-		public int getPreisHaus2() {
-			return preisHaus2;
-		}
-
-		public void setPreisHaus2(int preisHaus2) {
-			this.preisHaus2 = preisHaus2;
-		}
-
-		public int getPreisHaus3() {
-			return preisHaus3;
-		}
-
-		public void setPreisHaus3(int preisHaus3) {
-			this.preisHaus3 = preisHaus3;
-		}
-
-		public int getPreisHaus4() {
-			return preisHaus4;
-		}
-
-		public void setPreisHaus4(int preisHaus4) {
-			this.preisHaus4 = preisHaus4;
-		}
-
-		public int getPreisHotel() {
-			return preisHotel;
-		}
-
-		public void setPreisHotel(int preisHotel) {
-			this.preisHotel = preisHotel;
-		}
-
+		
 		public int getMietpreisHaus1() {
 			return mietpreisHaus1;
 		}

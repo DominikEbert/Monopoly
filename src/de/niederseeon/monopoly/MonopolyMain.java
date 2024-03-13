@@ -27,10 +27,10 @@ public class MonopolyMain {
 		Strasse strasse = new Strasse();
 		Bahnhof bahnhof = new Bahnhof();
 		
-		Strasse badstrasse = new Strasse();
-		Strasse turmstrasse = new Strasse();
+//		Strasse badstrasse = new Strasse();
 		
-		Strasse chausseestrasse = new Strasse();
+		
+		Strasse chausseestrasse = erstelleStrasse("Chauseestraße", 2000, 120, 600, 200, 600, 1800, 3200, 5000, 1000);
 		Strasse elisenstrasse = new Strasse();
 		Strasse poststrasse = new Strasse();
 		
@@ -65,7 +65,12 @@ public class MonopolyMain {
 		
 		
 		
-		erstelleTurmstrasse(turmstrasse);
+		Strasse turmstrasse = erstelleTurmstrasse();
+		
+		
+		Strasse badstrasse = erstelleStrasse("Badstraße", 1200, 40, 600, 200, 600, 1800, 3200, 5000, 1000);
+		
+		
 		erstelleSchillerstrasse(schillerstrasse);
 		
 		
@@ -74,9 +79,30 @@ public class MonopolyMain {
 		
 		
 	}
-
-	private static void erstelleTurmstrasse(Strasse turmstrasse) {
+	
+	private static Strasse erstelleStrasse(String name, int kaufpreis, int mietpreis, int hypothekenwert, int mietpreisHaus1, 
+			int mietpreisHaus2, int mietpreisHaus3, int mietpreisHaus4, int mietpreisHotel, int preisGebaeude ) {
 		// Turmstraße Daten *******************************************
+		Strasse strasse = new Strasse();
+			strasse.setName(name);
+		
+			strasse.setKaufpreis(kaufpreis);
+			strasse.setMietpreis(mietpreis);
+			strasse.setHypothekenwert(hypothekenwert);
+			
+			strasse.setMietpreisHaus1(mietpreisHaus1);
+			strasse.setMietpreisHaus2(mietpreisHaus2);
+			strasse.setMietpreisHaus3(mietpreisHaus3);
+			strasse.setMietpreisHaus4(mietpreisHaus4);
+			strasse.setMietpreisHotel(mietpreisHotel);
+			
+			strasse.setPreisGebaeude(preisGebaeude);
+			return strasse;
+	}
+
+	private static Strasse erstelleTurmstrasse() {
+		// Turmstraße Daten *******************************************
+		Strasse turmstrasse = new Strasse();
 			turmstrasse.setName("Turmstraße");
 		
 			turmstrasse.setKaufpreis(1200);
@@ -88,13 +114,17 @@ public class MonopolyMain {
 			turmstrasse.setMietpreisHaus3(3600);
 			turmstrasse.setMietpreisHaus4(6400);
 			turmstrasse.setMietpreisHotel(9000);
-			
-			turmstrasse.setPreisHaus1(1000);
-			turmstrasse.setPreisHaus2(1000);
-			turmstrasse.setPreisHaus3(1000);
-			turmstrasse.setPreisHaus4(1000);
-			turmstrasse.setPreisHotel(1000);
+//			
+//			turmstrasse.setPreisHaus1(1000);
+//			turmstrasse.setPreisHaus2(1000);
+//			turmstrasse.setPreisHaus3(1000);
+//			turmstrasse.setPreisHaus4(1000);
+//			turmstrasse.setPreisHotel(1000);
+			return turmstrasse;
 	}
+	
+	
+	
 	private static void erstelleSchillerstrasse(Strasse schillerstrasse) {
 		// Schillerstraße Daten *******************************************
 			schillerstrasse.setName("Schillerstraße");
@@ -108,11 +138,11 @@ public class MonopolyMain {
 			schillerstrasse.setMietpreisHaus3(16000);
 			schillerstrasse.setMietpreisHaus4(19500);
 			schillerstrasse.setMietpreisHotel(23000);
-			
-			schillerstrasse.setPreisHaus1(3000);
-			schillerstrasse.setPreisHaus2(3000);
-			schillerstrasse.setPreisHaus3(3000);
-			schillerstrasse.setPreisHaus4(3000);
-			schillerstrasse.setPreisHotel(3000);
+//			
+//			schillerstrasse.setPreisHaus1(3000);
+//			schillerstrasse.setPreisHaus2(3000);
+//			schillerstrasse.setPreisHaus3(3000);
+//			schillerstrasse.setPreisHaus4(3000);
+//			schillerstrasse.setPreisHotel(3000);
 	}
 }
