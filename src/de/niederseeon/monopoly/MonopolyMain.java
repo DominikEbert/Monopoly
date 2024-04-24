@@ -66,8 +66,8 @@ public class MonopolyMain {
 		
 		
 		erstelleTurmstrasse(turmstrasse);
-		badstrasse.setFarbgruppe("Lila");
-		turmstrasse.setFarbgruppe("lila");
+//		badstrasse.setFarbgruppe("Lila");
+//		turmstrasse.setFarbgruppe("lila");
 		
 		erstelleSchillerstrasse(schillerstrasse);
 		
