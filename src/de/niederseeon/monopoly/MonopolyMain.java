@@ -1,6 +1,7 @@
 package de.niederseeon.monopoly;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MonopolyMain {
 
@@ -25,9 +26,8 @@ public class MonopolyMain {
 			System.out.println(spieler2.getName() + " hat einen Pasch gewürfelt.");
 		}
 		Strasse strasse = new Strasse("Keine Straße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Bahnhof bahnhof = new Bahnhof();
+		Bahnhof bahnhof = new Bahnhof("Kein Bahnhof");
 		
-//		
 		Strasse badstrasse = new Strasse("Badstraße", 1200, 40, 600, 200, 600, 1800, 3200, 5000, 1000);
 		Strasse turmstrasse = new Strasse("Turmstraße", 1200, 40, 600, 200, 600, 1800, 3200, 5000, 1000);
 		
@@ -58,11 +58,17 @@ public class MonopolyMain {
 		Strasse parkstrasse = new Strasse("Parkstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
 		Strasse schlossallee = new Strasse("Schlossallee", 20, 20, 20, 20, 20, 20, 20, 20, 20);
 		
-		Bahnhof nordbahnhof = new Bahnhof();
-		Bahnhof suedbahnhof = new Bahnhof();
-		Bahnhof westbahnhof = new Bahnhof();
-		Bahnhof ostbahnhof = new Bahnhof();
+		Bahnhof nordbahnhof = new Bahnhof("Hauptbahnhof");
+		Bahnhof suedbahnhof = new Bahnhof("Südbahnhof");
+		Bahnhof westbahnhof = new Bahnhof("Westbahnhof");
+		Bahnhof ostbahnhof = new Bahnhof("Ostbahnhof");
 		
+		
+		Farbgruppe lila = new Farbgruppe();
+		lila.setFarbe("Lila");
+		lila.setKaufpreisGebaeude(1000);
+		List<Strasse> lilaStrassen = new ArrayList(); 
+		lila.setStrassen(lilaStrassen);
 		
 		
 		

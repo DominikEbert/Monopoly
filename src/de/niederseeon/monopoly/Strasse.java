@@ -13,6 +13,8 @@ public class Strasse extends Immobilie {
 	    private int mietpreisHotel;
 	    
 	    private int hypothekenwert;
+	    
+	    private String farbgruppe;
 
 		public int getAnzahlGebauterHaeuser() {
 			return anzahlGebauterHaeuser;
@@ -105,5 +107,17 @@ public class Strasse extends Immobilie {
 			this.mietpreisHaus4 = mietpreisHaus4;
 			this.mietpreisHotel = mietpreisHotel;
 			this.hypothekenwert = hypothekenwert;
+		}
+
+
+
+		public String getFarbgruppe() {
+			return farbgruppe;
+		}
+
+
+
+		public void setFarbgruppe(String farbgruppe) {
+			this.farbgruppe = farbgruppe;
 		}
 }

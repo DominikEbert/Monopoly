@@ -65,7 +65,9 @@ public class Immobilie {
 		this.name = name;
 	}
 
-
+	public int getMietpreis(int augenzahl) {
+		return getMietpreis();
+	}
 
 
 	public int getMietpreis() {
