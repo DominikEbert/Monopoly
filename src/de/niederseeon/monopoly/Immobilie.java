@@ -107,7 +107,21 @@ public class Immobilie {
 	public void setPostition(Feld postition) {
 		this.postition = postition;
 	}
-	
+
+
+
+
+	public Immobilie(int kaufpreis, String name, int mietpreis) {
+		super();
+		this.kaufpreis = kaufpreis;
+		this.name = name;
+		this.mietpreis = mietpreis;
+	}
+
+
+
+
+
 	
 	
 	
