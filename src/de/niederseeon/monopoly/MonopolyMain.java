@@ -70,7 +70,11 @@ public class MonopolyMain {
 		List<Strasse> lilaStrassen = new ArrayList(); 
 		lila.setStrassen(lilaStrassen);
 		
-		
+		Feld bs = new Feld();
+		bs.setIndex(1);
+		PositionsAenderungsAktion gehezurbadstrasse = new PositionsAenderungsAktion();
+		gehezurbadstrasse.setZiel(bs);
+		gehezurbadstrasse.setRueckzug(true);
 		
 //		Strasse turmstrasse = erstelleTurmstrasse();
 //		erstelleSchillerstrasse(schillerstrasse);
