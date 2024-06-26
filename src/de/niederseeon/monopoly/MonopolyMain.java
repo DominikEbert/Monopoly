@@ -1,10 +1,12 @@
 package de.niederseeon.monopoly;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MonopolyMain {
 
+	public static List<Gemeinschaftskarte>gemeinschaftskarten;
 	public static void main(String[] args) {
 		
 		Spieler spieler1 = new Spieler("Johannes");
@@ -72,11 +74,31 @@ public class MonopolyMain {
 		
 		Feld bs = new Feld();
 		bs.setIndex(1);
+		bs.setImmobilie(badstrasse);
 		PositionsAenderungsAktion gehezurbadstrasse = new PositionsAenderungsAktion();
 		gehezurbadstrasse.setZiel(bs);
 		gehezurbadstrasse.setRueckzug(true);
 		
-//		Strasse turmstrasse = erstelleTurmstrasse();
+		LinkedList<Aktion> aktionen = new LinkedList<Aktion>();
+		aktionen.add(gehezurbadstrasse);
+		
+		Gemeinschaftskarte gzb = new Gemeinschaftskarte();
+		gzb.setText("Gehe zurück zur Badstrasse! Gehe nicht über los! Ziehe keine 4000$ ein!");
+		
+		gzb.setAktionen(aktionen);
+		gemeinschaftskarten.add(gzb);
+		Feld gm1 = new Feld(2, true);
+		Feld ts = new Feld();
+		ts.setIndex(3);
+		ts.setImmobilie(turmstrasse);
+		
+		
+		
+		
+		
+		
+		
+		//		Strasse turmstrasse = erstelleTurmstrasse();
 //		erstelleSchillerstrasse(schillerstrasse);
 		
 		
