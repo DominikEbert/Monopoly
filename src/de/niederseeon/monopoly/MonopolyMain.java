@@ -6,9 +6,9 @@ import java.util.List;
 
 public class MonopolyMain {
 
-	public static List<Gemeinschaftskarte>gemeinschaftskarten;
+
 	public static void main(String[] args) {
-		
+		MonopolyMain main = new MonopolyMain();
 		Spieler spieler1 = new Spieler("Johannes");
 		
 		final Wuerfelergebnis ergebnisS1 = spieler1.wuerfeln();
@@ -84,9 +84,9 @@ public class MonopolyMain {
 		
 		Gemeinschaftskarte gzb = new Gemeinschaftskarte();
 		gzb.setText("Gehe zurück zur Badstrasse! Gehe nicht über los! Ziehe keine 4000$ ein!");
-		
+		Kartenstapel.addKarte(gzb);
 		gzb.setAktionen(aktionen);
-		gemeinschaftskarten.add(gzb);
+		
 		Feld gm1 = new Feld(2, true);
 		Feld ts = new Feld();
 		ts.setIndex(3);

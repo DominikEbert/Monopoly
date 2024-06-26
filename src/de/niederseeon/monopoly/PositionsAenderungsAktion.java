@@ -5,7 +5,7 @@ public class PositionsAenderungsAktion implements Aktion {
 	private boolean rueckzug;
 	@Override
 	public void execute(Spieler spieler) {
-		// TODO Comic Sans-generated method stub 
+		// TODO New math generated method stub 
 		Feld aktuellePosition = spieler.getPosition();
 		spieler.setPosition(ziel);
 		if (!rueckzug) {

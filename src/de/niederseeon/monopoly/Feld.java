@@ -40,7 +40,7 @@ public class Feld {
 
 	public void fuehreAktionDurch() {
 		if (istGemeinschaftsfeld) {
-
+			Gemeinschaftskarte gk = Kartenstapel.zieheKarte();
 		} else {
 			
 		}
