@@ -6,10 +6,7 @@ import java.util.List;
 
 public class MonopolyMain {
 
-
 	public static void main(String[] args) {
-		MonopolyMain main = new MonopolyMain();
-		Spieler spieler1 = new Spieler("Johannes");
 		
 		final Wuerfelergebnis ergebnisS1 = spieler1.wuerfeln();
 		System.out.println(spieler1.getName() + " hat gewürfelt.");
@@ -18,7 +15,7 @@ public class MonopolyMain {
 		System.out.println(ergebnisS1.istPasch());
 		int gesamtergebnis1 = ergebnisS1.getErgebnisWuerfel1() + ergebnisS1.getErgebnisWuerfel2();
 		System.out.println("Ergebnis: " + gesamtergebnis1);
-		
+
 		Spieler spieler2 = new Spieler("Enis");
 		final Wuerfelergebnis ergebnisS2 = spieler2.wuerfeln();
 		System.out.println(spieler2.getName() + " hat gewürfelt.");
@@ -27,146 +24,105 @@ public class MonopolyMain {
 		if (ergebnisS2.istPasch()) {
 			System.out.println(spieler2.getName() + " hat einen Pasch gewürfelt.");
 		}
-		Strasse strasse = new Strasse("Keine Straße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Bahnhof bahnhof = new Bahnhof("Kein Bahnhof");
-		
-		Strasse badstrasse = new Strasse("Badstraße", 1200, 40, 600, 200, 600, 1800, 3200, 5000, 1000);
-		Strasse turmstrasse = new Strasse("Turmstraße", 1200, 40, 600, 200, 600, 1800, 3200, 5000, 1000);
-		
-		Strasse chausseestrasse = new Strasse("Chauseestraße", 2000, 120, 600, 200, 600, 1800, 3200, 5000, 1000);
-		Strasse elisenstrasse = new Strasse("Elisenstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse poststrasse = new Strasse("Poststraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		
-		Strasse seestrasse = new Strasse("Seestraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse hafenstrasse = new Strasse("Hafenstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse neuestrasse = new Strasse("Neuestraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		
-		Strasse muenchnerstrasse = new Strasse("Münchnerstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse wienerstrasse = new Strasse("Wienerstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse berlinerstrasse = new Strasse("Berlinerstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		
-		Strasse theaterstrasse = new Strasse("Theaterstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse museumstrasse = new Strasse("Museumstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse opernplatz = new Strasse("Opernplatz", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		
-		Strasse lessingstrasse = new Strasse("Lessingstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse schillerstrasse = new Strasse("Schillerstraße", 5200, 480, 2600, 2200, 6600, 16000, 19500, 23000, 3000);
-		Strasse goethestrasse = new Strasse("Goethestraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		
-		Strasse rathausplatz = new Strasse("Rathausplatz", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse hauptstrasse= new Strasse("Hauptstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse bahnhofstrasse = new Strasse("Bahnhofstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		
-		Strasse parkstrasse = new Strasse("Parkstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		Strasse schlossallee = new Strasse("Schlossallee", 20, 20, 20, 20, 20, 20, 20, 20, 20);
-		
-		Bahnhof nordbahnhof = new Bahnhof("Hauptbahnhof");
-		Bahnhof suedbahnhof = new Bahnhof("Südbahnhof");
-		Bahnhof westbahnhof = new Bahnhof("Westbahnhof");
-		Bahnhof ostbahnhof = new Bahnhof("Ostbahnhof");
-		
-		
+
 		Farbgruppe lila = new Farbgruppe();
 		lila.setFarbe("Lila");
 		lila.setKaufpreisGebaeude(1000);
-		List<Strasse> lilaStrassen = new ArrayList(); 
+		List<Strasse> lilaStrassen = new ArrayList();
 		lila.setStrassen(lilaStrassen);
+		
+	}
+	
+	private static void initialisiereSpielfeld()
+	{
+		Strasse strasse = new Strasse("Keine Straße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Bahnhof bahnhof = new Bahnhof("Kein Bahnhof");
+		
+		Feld losfeld = new Feld(0, false);
+		
+		Strasse badstrasse = new Strasse("Badstraße", 1200, 40, 600, 200, 600, 1800, 3200, 5000, 1000);
+		Strasse turmstrasse = new Strasse("Turmstraße", 1200, 40, 600, 200, 600, 1800, 3200, 5000, 1000);
+		Feld ts = new Feld(3, turmstrasse);
+		
+		Strasse chausseestrasse = new Strasse("Chauseestraße", 2000, 120, 600, 200, 600, 1800, 3200, 5000, 1000);
+		Feld cs = new Feld(6, chausseestrasse);
+		Strasse elisenstrasse = new Strasse("Elisenstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld es = new Feld(8, elisenstrasse);
+		Strasse poststrasse = new Strasse("Poststraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld ps = new Feld(9, poststrasse);
+
+		Strasse seestrasse = new Strasse("Seestraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld ss = new Feld(11, seestrasse);
+		Strasse hafenstrasse = new Strasse("Hafenstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld hs = new Feld(13, hafenstrasse);
+		Strasse neuestrasse = new Strasse("Neuestraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld ns = new Feld(14, neuestrasse);
+
+		Strasse muenchnerstrasse = new Strasse("Münchnerstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld ms = new Feld(16, muenchnerstrasse);
+		Strasse wienerstrasse = new Strasse("Wienerstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld ws = new Feld(18, wienerstrasse);
+		Strasse berlinerstrasse = new Strasse("Berlinerstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld be = new Feld(19, berlinerstrasse);
+
+		Strasse theaterstrasse = new Strasse("Theaterstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld th = new Feld(21, theaterstrasse);
+		Strasse museumstrasse = new Strasse("Museumstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld mu = new Feld(23, museumstrasse);
+		Strasse opernplatz = new Strasse("Opernplatz", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld op = new Feld(24, opernplatz);
+
+		Strasse lessingstrasse = new Strasse("Lessingstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld ls = new Feld(26, lessingstrasse);
+		Strasse schillerstrasse = new Strasse("Schillerstraße", 5200, 480, 2600, 2200, 6600, 16000, 19500, 23000, 3000);
+		Feld sc = new Feld(27, schillerstrasse);
+		Strasse goethestrasse = new Strasse("Goethestraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld gs = new Feld(29, goethestrasse);
+
+		Strasse rathausplatz = new Strasse("Rathausplatz", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld rp = new Feld(31, rathausplatz);
+		Strasse hauptstrasse = new Strasse("Hauptstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld ha = new Feld(32, hauptstrasse);
+		Strasse bahnhofstrasse = new Strasse("Bahnhofstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld ba = new Feld(34, bahnhofstrasse);
+
+		Strasse parkstrasse = new Strasse("Parkstraße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld pa = new Feld(37, parkstrasse);
+		Strasse schlossallee = new Strasse("Schlossallee", 20, 20, 20, 20, 20, 20, 20, 20, 20);
+		Feld sa = new Feld(39, schlossallee);
+
+		Bahnhof nordbahnhof = new Bahnhof("Nordbahnhof");
+		Feld nb = new Feld(25, nordbahnhof);
+		Bahnhof suedbahnhof = new Bahnhof("Südbahnhof");
+		Feld sb = new Feld(5, suedbahnhof);
+		Bahnhof westbahnhof = new Bahnhof("Westbahnhof");
+		Feld wb = new Feld(15, westbahnhof);
+		Bahnhof hauptbahnhof = new Bahnhof("Hauptbahnhof");
+		Feld hb = new Feld(35, hauptbahnhof);
+		
 		
 		Feld bs = new Feld();
 		bs.setIndex(1);
 		bs.setImmobilie(badstrasse);
+		
+		Feld gm1 = new Feld(2, true);
+		
+		
 		PositionsAenderungsAktion gehezurbadstrasse = new PositionsAenderungsAktion();
 		gehezurbadstrasse.setZiel(bs);
 		gehezurbadstrasse.setRueckzug(true);
-		
+
 		LinkedList<Aktion> aktionen = new LinkedList<Aktion>();
 		aktionen.add(gehezurbadstrasse);
-		
+
 		Gemeinschaftskarte gzb = new Gemeinschaftskarte();
 		gzb.setText("Gehe zurück zur Badstrasse! Gehe nicht über los! Ziehe keine 4000$ ein!");
 		Kartenstapel.addKarte(gzb);
 		gzb.setAktionen(aktionen);
 		
-		Feld gm1 = new Feld(2, true);
-		Feld ts = new Feld();
-		ts.setIndex(3);
-		ts.setImmobilie(turmstrasse);
-		
-		
-		
-		
-		
-		
-		
-		//		Strasse turmstrasse = erstelleTurmstrasse();
-//		erstelleSchillerstrasse(schillerstrasse);
-		
-		
+		MonopolyMain main = new MonopolyMain();
+		Spieler spieler1 = new Spieler("Johannes");
+		spieler1.setPosition(losfeld);
+		spieler1.setKontostand(10000);
 	}
-	
-//	private static Strasse new Strasse(String name, int kaufpreis, int mietpreis, int hypothekenwert, int mietpreisHaus1, 
-//			int mietpreisHaus2, int mietpreisHaus3, int mietpreisHaus4, int mietpreisHotel, int preisGebaeude ) {
-//		// Turmstraße Daten *******************************************
-//		Strasse strasse = new Strasse();
-//			strasse.setName(name);
-//		
-//			strasse.setKaufpreis(kaufpreis);
-//			strasse.setMietpreis(mietpreis);
-//			strasse.setHypothekenwert(hypothekenwert);
-//			
-//			strasse.setMietpreisHaus1(mietpreisHaus1);
-//			strasse.setMietpreisHaus2(mietpreisHaus2);
-//			strasse.setMietpreisHaus3(mietpreisHaus3);
-//			strasse.setMietpreisHaus4(mietpreisHaus4);
-//			strasse.setMietpreisHotel(mietpreisHotel);
-//			
-//			strasse.setPreisGebaeude(preisGebaeude);
-//			return strasse;
-//	}
-//
-//	private static Strasse erstelleTurmstrasse() {
-//		// Turmstraße Daten *******************************************
-//		Strasse turmstrasse = new Strasse();
-//			turmstrasse.setName("Turmstraße");
-//		
-//			turmstrasse.setKaufpreis(1200);
-//			turmstrasse.setMietpreis(80);
-//			turmstrasse.setHypothekenwert(600);
-//			
-//			turmstrasse.setMietpreisHaus1(400);
-//			turmstrasse.setMietpreisHaus2(1200);
-//			turmstrasse.setMietpreisHaus3(3600);
-//			turmstrasse.setMietpreisHaus4(6400);
-//			turmstrasse.setMietpreisHotel(9000);
-//			
-//			turmstrasse.setPreisHaus1(1000);
-//			turmstrasse.setPreisHaus2(1000);
-//			turmstrasse.setPreisHaus3(1000);
-//			turmstrasse.setPreisHaus4(1000);
-//			turmstrasse.setPreisHotel(1000);
-//			return turmstrasse;
-//	}
-//	
-//	
-//	
-//	private static void erstelleSchillerstrasse(Strasse schillerstrasse) {
-//		// Schillerstraße Daten *******************************************
-//			schillerstrasse.setName("Schillerstraße");
-//		
-//			schillerstrasse.setKaufpreis(5200);
-//			schillerstrasse.setMietpreis(480);
-//			schillerstrasse.setHypothekenwert(2600);
-//			
-//			schillerstrasse.setMietpreisHaus1(2200);
-//			schillerstrasse.setMietpreisHaus2(6600);
-//			schillerstrasse.setMietpreisHaus3(16000);
-//			schillerstrasse.setMietpreisHaus4(19500);
-//			schillerstrasse.setMietpreisHotel(23000);
-//			
-//			schillerstrasse.setPreisHaus1(3000);
-//			schillerstrasse.setPreisHaus2(3000);
-//			schillerstrasse.setPreisHaus3(3000);
-//			schillerstrasse.setPreisHaus4(3000);
-//			schillerstrasse.setPreisHotel(3000);
-//	}
 }

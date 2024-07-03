@@ -4,7 +4,7 @@ import java.util.List;
 public class Spieler {
 
     private String name;
-    private double kontostand;
+    private int kontostand;
 
     private Feld position;
 
@@ -34,11 +34,11 @@ public class Spieler {
     }
 
 
-    public double getKontostand() {
+    public int getKontostand() {
         return kontostand;
     }
 
-    public void setKontostand(double kontostand) {
+    public void setKontostand(int kontostand) {
         this.kontostand = kontostand;
     }
 
@@ -81,4 +81,12 @@ public class Spieler {
     public void setName(String name) {
         this.name = name;
     }
+
+	@Override
+	public String toString() {
+		String toString = name + " steht auf Feld " + position + " und hat einen Kontostand von " + kontostand;
+		return toString;
+	}
+    
+    
 }
