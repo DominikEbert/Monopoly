@@ -35,4 +35,9 @@ public class Wuerfelergebnis {
     public boolean istPasch() {
         return ergebnisWuerfel1 == ergebnisWuerfel2;
     }
+    
+    public int getGesamtergebnis() {
+    	return ergebnisWuerfel1 + ergebnisWuerfel2;
+    	
+    }
 }

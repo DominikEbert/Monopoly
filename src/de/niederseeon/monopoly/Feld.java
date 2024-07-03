@@ -45,4 +45,14 @@ public class Feld {
 			
 		}
 	}
+
+	@Override
+	public String toString() {
+		if (immobilie != null) {
+			return "Feld Nummer " + index + " ist die " + immobilie.getName();
+			
+		}
+		return "Feld Nummer " + index + " ist keine Immobilie!";
+	}
+	
 }
