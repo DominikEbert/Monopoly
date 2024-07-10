@@ -1,9 +1,10 @@
 package de.niederseeon.monopoly;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Kartenstapel {
-	public static List<Gemeinschaftskarte>gemeinschaftskarten;
+	public static List<Gemeinschaftskarte>gemeinschaftskarten = new LinkedList();
 
 	public Kartenstapel() {
 		

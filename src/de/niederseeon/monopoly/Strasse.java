@@ -120,4 +120,10 @@ public class Strasse extends Immobilie {
 		public void setFarbgruppe(String farbgruppe) {
 			this.farbgruppe = farbgruppe;
 		}
+
+
+
+
+		
+		
 }

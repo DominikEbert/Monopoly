@@ -31,7 +31,11 @@ public class Wuerfelergebnis {
     public void setErgebnisWuerfel2(int ergebnisWuerfel2) {
         this.ergebnisWuerfel2 = ergebnisWuerfel2;
     }
-
+    
+   public int getGesamtergebnis() {
+	   return ergebnisWuerfel1 + ergebnisWuerfel2;
+   }
+    
     public boolean istPasch() {
         return ergebnisWuerfel1 == ergebnisWuerfel2;
     }

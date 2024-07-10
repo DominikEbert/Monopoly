@@ -45,4 +45,11 @@ public class Feld {
 			
 		}
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getImmobilie() + " hat den Index" + index;
+	}
+	
 }

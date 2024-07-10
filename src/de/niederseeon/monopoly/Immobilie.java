@@ -103,7 +103,11 @@ public class Immobilie {
 		this.mietpreis = mietpreis;
 	}
 
-
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getName();
+	}
 
 
 
