@@ -9,29 +9,7 @@ import java.util.TreeMap;
 public class MonopolyMain {
 
 	public static void main(String[] args) {
-		
-		//final Wuerfelergebnis ergebnisS1 = spieler1.wuerfeln();
-		//System.out.println(spieler1.getName() + " hat gewürfelt.");
-		//System.out.println("Erster Würfel: " + ergebnisS1.getErgebnisWuerfel1());
-		//System.out.println("Zweiter Würfel: " + ergebnisS1.getErgebnisWuerfel2());
-		//System.out.println(ergebnisS1.istPasch());
-		//int gesamtergebnis1 = ergebnisS1.getErgebnisWuerfel1() + ergebnisS1.getErgebnisWuerfel2();
-		//System.out.println("Ergebnis: " + gesamtergebnis1);
 
-//		Spieler spieler2 = new Spieler("Enis");
-//		final Wuerfelergebnis ergebnisS2 = spieler2.wuerfeln();
-//		System.out.println(spieler2.getName() + " hat gewürfelt.");
-//		int gesamtergebnis2 = ergebnisS2.getErgebnisWuerfel1() + ergebnisS2.getErgebnisWuerfel2();
-//		System.out.println("Gesamtergebnis von Wurf 1: " + gesamtergebnis2);
-//		if (ergebnisS2.istPasch()) {
-//			System.out.println(spieler2.getName() + " hat einen Pasch gewürfelt.");
-//		}
-//
-//		Farbgruppe lila = new Farbgruppe();
-//		lila.setFarbe("Lila");
-//		lila.setKaufpreisGebaeude(1000);
-//		List<Strasse> lilaStrassen = new ArrayList();
-//		lila.setStrassen(lilaStrassen);
 		initialisiereSpielfeld();
 	}
 	
@@ -143,15 +121,16 @@ public class MonopolyMain {
 		LinkedList<Aktion> aktionen = new LinkedList<Aktion>();
 		aktionen.add(gehezurbadstrasse);
 
-		Gemeinschaftskarte gzb = new Gemeinschaftskarte();
-		gzb.setText("Gehe zurück zur Badstrasse! Gehe nicht über los! Ziehe keine 4000$ ein!");
-		Kartenstapel.addKarte(gzb);
-		gzb.setAktionen(aktionen);
+//		Gemeinschaftskarte gzb = new Gemeinschaftskarte();
+//		gzb.setText("Gehe zurück zur Badstraße! Gehe nicht über los! Ziehe keine 4000$ ein!");
+//		Kartenstapel.addKarte(gzb);
+//		gzb.setAktionen(aktionen);
 		
 		MonopolyMain main = new MonopolyMain();
 		Spieler spieler1 = new Spieler("Johannes");
 		spieler1.setPosition(losfeld);
 		spieler1.setKontostand(10000);
+
 		final Wuerfelergebnis ergebnisS1 = spieler1.wuerfeln();
 		spieler1.setPosition(felder.get(ergebnisS1.getGesamtergebnis()));
 		System.out.println(spieler1);
