@@ -3,6 +3,13 @@ package de.niederseeon.monopoly;
 public class PositionsAenderungsAktion implements Aktion {
 	private Feld ziel;
 	private boolean rueckzug;
+	
+	public PositionsAenderungsAktion(Feld ziel, boolean rueckzug) {
+		super();
+		this.ziel = ziel;
+		this.rueckzug = rueckzug;
+	}
+	
 	@Override
 	public void execute(Spieler spieler) {
 		// TODO New math generated method stub 

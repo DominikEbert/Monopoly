@@ -19,9 +19,11 @@ public class Spieler {
     public Spieler(String name) {
         this.name = name;
     }
-
+    
     public Wuerfelergebnis wuerfeln() {
-        return new Wuerfelergebnis();
+    	Wuerfelergebnis we = new Wuerfelergebnis();
+    	System.out.println("Ergebnis: " + we.getGesamtergebnis());
+    	return we;
     }
 
 

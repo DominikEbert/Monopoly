@@ -2,7 +2,7 @@ package de.niederseeon.monopoly;
 
 import java.util.List;
 
-public class Gemeinschaftskarte {
+public class Karte {
 	private String text;
 	private int effekt;
 	

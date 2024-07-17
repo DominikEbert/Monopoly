@@ -18,7 +18,7 @@ public class MonopolyMain {
 		Strasse strasse = new Strasse("Keine Straße", 20, 20, 20, 20, 20, 20, 20, 20, 20);
 		Bahnhof bahnhof = new Bahnhof("Kein Bahnhof");
 		
-		Feld losfeld = new Feld(0, false);
+		Feld losfeld = new Feld(0, false, false);
 		
 		Strasse badstrasse = new Strasse("Badstraße", 1200, 40, 600, 200, 600, 1800, 3200, 5000, 1000);
 		Feld bs = new Feld(1, badstrasse);
@@ -84,26 +84,42 @@ public class MonopolyMain {
 		Map <Integer, Feld> felder = new TreeMap<Integer, Feld>();
 		felder.put(0, losfeld);
 		felder.put(1, bs);
+		felder.put(2, new Feld(2, true, false));
 		felder.put(3, ts);
+		felder.put(4, new Feld(4, new KontostandAenderungsAktion(-1200)));
 		felder.put(6, cs);
+		felder.put(7, new Feld(7, false, true));
 		felder.put(8, es);
 		felder.put(9, ps);
+		Feld gefaengnis = new Feld(10, false, false);
+		felder.put(10, gefaengnis);
 		felder.put(11, ss);
+		Werk eWerk = new Werk();
+		felder.put(12, new Feld(12, eWerk));
 		felder.put(13, hs);
 		felder.put(14, ns);
 		felder.put(16, ms);
+		felder.put(17, new Feld(17, true, false));
 		felder.put(18, ws);
 		felder.put(19, be);
+		felder.put(20, new Feld(20, false, false));
 		felder.put(21, ts);
+		felder.put(22, new Feld(22, false, true));
 		felder.put(23, ms);
 		felder.put(24, op);
 		felder.put(26, ls);
 		felder.put(27, sc);
+		Werk wWerk = new Werk();
+		felder.put(28, new Feld(28, wWerk));
 		felder.put(29, gs);
+		felder.put(30, new Feld(30, new PositionsAenderungsAktion(gefaengnis, false)));
 		felder.put(31, rp);
 		felder.put(32, ha);
+		felder.put(33, new Feld(33, true, false));
 		felder.put(34, ba);
+		felder.put(36, new Feld(36, false, true));
 		felder.put(37, pa);
+		felder.put(38, new Feld(38, new KontostandAenderungsAktion(-2000)));
 		felder.put(39, sa);
 		felder.put(25, nb);
 		felder.put(15, wb);
@@ -111,12 +127,10 @@ public class MonopolyMain {
 		felder.put(35, hb);
 		
 		
-		Feld gm1 = new Feld(2, true);
+//		Feld gm1 = new Feld(2, true);
 		
 		
-		PositionsAenderungsAktion gehezurbadstrasse = new PositionsAenderungsAktion();
-		gehezurbadstrasse.setZiel(bs);
-		gehezurbadstrasse.setRueckzug(true);
+		PositionsAenderungsAktion gehezurbadstrasse = new PositionsAenderungsAktion(bs, true);
 
 		LinkedList<Aktion> aktionen = new LinkedList<Aktion>();
 		aktionen.add(gehezurbadstrasse);
@@ -130,9 +144,13 @@ public class MonopolyMain {
 		Spieler spieler1 = new Spieler("Johannes");
 		spieler1.setPosition(losfeld);
 		spieler1.setKontostand(10000);
+		
+		for(int i = 0; i < 3; i++) {
+			final Wuerfelergebnis ergebnisS1 = spieler1.wuerfeln();
+			spieler1.setPosition(felder.get(spieler1.getPosition().getIndex()+(ergebnisS1.getGesamtergebnis())));
+			System.out.println(spieler1);
+		}
+		
 
-		final Wuerfelergebnis ergebnisS1 = spieler1.wuerfeln();
-		spieler1.setPosition(felder.get(ergebnisS1.getGesamtergebnis()));
-		System.out.println(spieler1);
 	}
 }
